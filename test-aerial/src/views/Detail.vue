@@ -29,7 +29,11 @@
 </template>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+    .carousel-item img {
+        height:400px!important ;
+    }
+</style>
 
 
 <script>
