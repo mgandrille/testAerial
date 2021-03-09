@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Detail from '../views/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -11,9 +12,10 @@ const routes = [
     component: Home
   },
   {
-    path: '/produit/detail/:id(\\d+)',
+    path: '/product/:id(\\d+)',
     name: 'Detail',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Detail.vue')
+    component: Detail,
+    props: true,
   },
   {
     path: '/about',
