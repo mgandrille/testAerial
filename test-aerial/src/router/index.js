@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Detail from '../views/Detail.vue'
+import Panier from '../views/Panier.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,12 @@ const routes = [
     path: '/product/:id(\\d+)',
     name: 'Detail',
     component: Detail,
+    props: true,
+  },
+  {
+    path: '/basket',
+    name: 'Panier',
+    component: Panier,
     props: true,
   },
   {

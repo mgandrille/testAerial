@@ -22,7 +22,7 @@
             <p>{{product.description}}</p>
             <div class="panier row justify-content-between">
                 <p>Prix : <span class="font-weight-bold">{{product.price}} €</span></p>
-                <button class="btn btn-outline-success">Ajouter au panier</button>
+                <button @click="$store.commit('addProductToCart', product)" class="btn btn-outline-success">Ajouter au panier</button>
             </div>
         </div>
     </div>
