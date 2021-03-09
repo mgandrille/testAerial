@@ -1,18 +1,28 @@
 <template>
 	<div class="home">
-		<img alt="Vue logo" src="../assets/logo.png">
-		<HelloWorld msg="Welcome to Your Vue.js App"/>
+        <h1 class="mb-3">Découvrez nos produits</h1>
+        <div class="row justify-content-center">
+            <ProductCard v-for="(product, data) in myJson" :key="data" :product="product">{{data}}</ProductCard>
+        </div>
 	</div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import json from '@/assets/MOCK_DATA.json'
+import ProductCard from '@/components/ProductCard.vue'
 
 export default {
 	name: 'Home',
 	components: {
-		HelloWorld
-	}
+		ProductCard
+	},
+
+    data() {
+        return {
+            myJson: json,
+        }
+    }
 }
+
 </script>
